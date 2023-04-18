@@ -1,0 +1,6 @@
+.nav-area{
+  display: flex;
+  border: 2px solid black;
+  justify-content: center;
+  height: 10%;
+}
