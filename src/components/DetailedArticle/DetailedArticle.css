@@ -1,0 +1,52 @@
+.bleak-page {
+ height:100vh;
+ width: 100vw;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.title-display{
+  border:1px solid black; 
+  margin-top: 2rem; 
+  text-align: center;
+  width: 85%;
+}
+.author-spot{
+  margin-left:-59rem;
+  border:1px solid black;
+  margin-top: 1rem; 
+  width:20%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.article-syn{
+  display: flex;
+  border:1px solid black;
+  width:95%;
+}
+
+.article-syn>img {
+  border-radius: 10px;
+}
+.abstract{
+  font-size: x-large;
+  text-align:center; 
+}
+
+.button-wrap{
+  position:absolute;
+  bottom:3rem;
+  right:15rem;
+  border:2px solid black; 
+  width:25%;
+  display:flex;
+  justify-content: space-around;
+  height:4rem; 
+}
+.art-btn{
+  height:100%;
+  padding:1rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
