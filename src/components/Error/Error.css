@@ -1,0 +1,14 @@
+.error-page {
+  display: flex;
+}
+.err-image{
+  width: 45%;
+  height:100vh;
+}
+.err-message-wrap{
+  border:1px solid black; 
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
