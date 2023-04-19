@@ -1,8 +1,13 @@
 .articles-displayed{
-  border:1px solid black;
+  border:3px solid black;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-y: auto;
+  margin-top:2rem; 
+}
+.article-wrap{
+  border:2px solid black; 
+  margin-top: 3rem;
+  width: 90%;
 }
