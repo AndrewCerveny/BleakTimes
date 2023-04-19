@@ -36,6 +36,7 @@ class App extends Component{
      
       const comparableTitles = this.state.articles.map((news) => {
         news.titleAbr = news.title.substring(0,3).toUpperCase()
+        console.log('pants',news)
         return news
       })
       const matchedSelections = comparableTitles.filter((news) => news.titleAbr.includes(comparedWord))
