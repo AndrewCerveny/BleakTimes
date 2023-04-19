@@ -56,11 +56,12 @@
 .button-wrap{
   position:absolute;
   bottom:3rem;
-  right:12rem;
-  width:25%;
+  right:10rem;
+  width:30%;
   display:flex;
   justify-content: space-around;
-  height:4rem; 
+  height:4rem;
+  
 }
 .art-btn{
   height:100%;
