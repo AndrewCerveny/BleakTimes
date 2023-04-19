@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './DetailedArticle.css'
 
-const DetailedArticle = ({matchedArticle}) => {
+const DetailedArticle = ({matchedArticle, clear}) => {
   if(matchedArticle){
   return(
   <section className="bleak-page">
@@ -23,10 +23,10 @@ const DetailedArticle = ({matchedArticle}) => {
     </section>
     <div className="button-wrap">
       <a href={matchedArticle.shortUrl} target="_blank" rel="noopener noreferrer">
-        <button className="art-btn btnM"> Read More</button>
+        <button className="art-btn"> Read More</button>
       </a>
       <Link to='/'>
-        <button className="art-btn btnA"> Change Article</button>
+        <button className="art-btn" onClick={() => clear()} > Change Article</button>
       </Link>
     </div>
   </section>)

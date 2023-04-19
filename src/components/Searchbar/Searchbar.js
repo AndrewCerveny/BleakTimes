@@ -14,8 +14,7 @@ class Searchbar extends Component {
     this.setState({[name]:value})
     this.props.titleFind(value)
    }
-   
-
+ 
    render(){
     return(
       <form className="search-area">
@@ -26,6 +25,7 @@ class Searchbar extends Component {
         value={this.state.searchedTitle}
         onChange={(e)=> this.handleChange(e)}
         />
+       
       </form>
     )
    }
