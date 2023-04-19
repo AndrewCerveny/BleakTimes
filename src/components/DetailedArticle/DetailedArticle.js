@@ -11,9 +11,9 @@ const DetailedArticle = ({matchedArticle}) => {
       <h2>{matchedArticle.title}</h2>
     </section>
     <section className="author-spot">
-      <h3>{matchedArticle.byline}</h3> 
-      <h3> Published: {matchedArticle.publishedDate}</h3>
-      <h3> Updated:{matchedArticle.updatedDate}</h3>     
+      <h3 className="author">{matchedArticle.byline}</h3> 
+      <h3 className="subsection"> Published: <span className="date">{matchedArticle.publishedDate} </span> </h3>
+      <h3 className="subsection"> Updated: <span className="date">{matchedArticle.updatedDate}</span></h3>     
     </section>
     <section className="article-syn">
       <img src={matchedArticle.multimedia[1].url} alt={matchedArticle.multimedia[1].caption}/>
@@ -23,10 +23,10 @@ const DetailedArticle = ({matchedArticle}) => {
     </section>
     <div className="button-wrap">
       <a href={matchedArticle.shortUrl} target="_blank" rel="noopener noreferrer">
-        <button className="art-btn"> Read More</button>
+        <button className="art-btn btnM"> Read More</button>
       </a>
       <Link to='/'>
-        <button className="art-btn"> See Articles</button>
+        <button className="art-btn btnA"> Change Article</button>
       </Link>
     </div>
   </section>)
