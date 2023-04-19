@@ -14,3 +14,9 @@
   background-color: rgba(0, 0, 0, 0.072);
   opacity: .80;
 }
+
+@media (max-width: 900px) {
+ .article-wrap{
+  height: 25rem;
+ }
+}
