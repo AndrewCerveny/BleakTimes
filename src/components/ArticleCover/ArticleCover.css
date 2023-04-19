@@ -43,3 +43,34 @@
   font-weight: 800;
   font-style: italic;
 }
+@media (max-width: 900px) {
+  .image-cont{
+    border:1px solid black;
+    width: 80%;
+    height:85%;
+    margin-left:10%;
+    border-radius:10px;
+  }
+  .pic-image{
+    width: 100%;
+    border-radius: 10px;
+    
+  }
+  .article-cont{
+    display: flex;
+    flex-direction: column;
+  }
+    .article-cov {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 1.5rem;
+      width: 90%;
+      margin-bottom: 2%;
+    }
+    .article-cov>h2 {
+      font-size: large;
+      font-weight: 800;
+      font-style: italic;
+    }
+}
