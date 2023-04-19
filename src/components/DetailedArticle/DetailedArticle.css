@@ -11,6 +11,11 @@
   margin-top: 2rem; 
   text-align: center;
   width: 85%;
+  background-color: black;
+  color:rgba(255, 255, 255, 0.846);
+  font-size: x-large;
+  font-style: italic;
+  border-radius: 10px;
 }
 .author-spot{
   margin-left:-59rem;
@@ -19,34 +24,53 @@
   width:20%;
   margin-bottom: 2rem;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.169);
+}
+.author{
+  color:red;
+}
+.subsection{
+  color:blue;
 }
 .article-syn{
   display: flex;
-  border:1px solid black;
   width:95%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.article-syn>img {
+.article-syn > img {
   border-radius: 10px;
 }
 .abstract{
   font-size: x-large;
-  text-align:center; 
+  text-align:center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border:2px solid black;
+  width: 45%;
+  border-radius: 10px; 
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.083);
 }
 
 .button-wrap{
   position:absolute;
   bottom:3rem;
-  right:15rem;
-  border:2px solid black; 
-  width:25%;
+  right:10rem;
+  width:30%;
   display:flex;
   justify-content: space-around;
-  height:4rem; 
+  height:4rem;
+  
 }
 .art-btn{
   height:100%;
   padding:1rem;
   border-radius: 10px;
   font-size: 1.5rem;
+}
+
+.art-btn:hover{
+  background-color: rgba(0, 0, 0, 0.462);
+  color:white; 
 }

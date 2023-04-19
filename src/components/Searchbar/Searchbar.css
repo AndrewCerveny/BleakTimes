@@ -1,0 +1,18 @@
+.search-area{
+  border:2px solid black; 
+  width: 50%;
+  height:4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.482);
+}
+.search-area > input {
+  padding:1rem;
+  width:60%;
+  font-size: large;
+  font-weight: 600;
+  border-radius: 5px;
+  text-align: center;
+}

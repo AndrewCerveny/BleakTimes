@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import '../Searchbar/Searchbar.css'
+import './Searchbar.css'
 
 
 class Searchbar extends Component {
@@ -18,7 +18,7 @@ class Searchbar extends Component {
 
    render(){
     return(
-      <form>
+      <form className="search-area">
         <input
         type="text"
         placeholder="Search by title"

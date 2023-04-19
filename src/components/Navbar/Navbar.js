@@ -7,7 +7,7 @@ const Navbar = () => {
   
   return(
    <nav className="nav-area">
-    <Link to='/'>
+    <Link to='/' className="nav-l">
       <div className="nav-wrapper">
         <img src={RainStorm} alt="Rain Clouds blocking the sun"/>
         <h1> Bleak Times </h1>

@@ -1,13 +1,16 @@
 .articles-displayed{
-  border:3px solid black;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top:2rem; 
 }
-.article-wrap{
-  border:2px solid black; 
-  margin-top: 3rem;
+.article-wrap{ 
+  margin-top: 2rem;
   width: 90%;
+  border-radius: 10px;
+}
+.article-wrap:hover{
+  background-color: rgba(0, 0, 0, 0.072);
+  opacity: .80;
 }

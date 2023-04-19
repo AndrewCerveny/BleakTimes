@@ -1,11 +1,10 @@
 .cover-area{
  width: 100%;
  height:100%;
- box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.633);
+ box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.712);
  border-radius: 10px;
 }
 .article-cont{
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -28,4 +27,19 @@
   width:26rem;
   height:100%; 
   border-radius: 10px;
+}
+.link-c{
+  text-decoration: none;
+  color:black;
+}
+.date-written{
+  color:blue; 
+}
+.date{
+  color:black;
+}
+.article-cov > h2 {
+  font-size: x-large;
+  font-weight: 800;
+  font-style: italic;
 }
