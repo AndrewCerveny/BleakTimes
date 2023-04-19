@@ -20,7 +20,7 @@ class Searchbar extends Component {
       <form className="search-area">
         <input
         type="text"
-        placeholder="Search by title"
+        placeholder="Search by title  🔎"
         name='searchedTitle'
         value={this.state.searchedTitle}
         onChange={(e)=> this.handleChange(e)}
