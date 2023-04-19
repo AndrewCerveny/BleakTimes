@@ -74,3 +74,64 @@
   background-color: rgba(0, 0, 0, 0.462);
   color:white; 
 }
+
+@media (max-width: 900px) {
+  .title-display{
+    border: 1px solid black;
+    margin-top: 3%;
+    text-align: center;
+    width: 85%;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.846);
+    font-size: medium;
+    font-style: italic;
+    border-radius: 10px;
+  }
+  .author-spot {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 6%;
+    border: 1px solid black;
+    margin-top: 1%;
+    width: 65%;
+    height:20%;
+    margin-bottom: 2rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.169);
+  }
+  .author-spot >h3 {
+    margin:2%;
+  }
+    .article-syn>img {
+      border-radius: 10px;
+      height: 60%;
+    }
+    .article-syn {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+     .abstract {
+      font-size: large;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      border: 2px solid black;
+      width: 85%;
+      border-radius: 10px;
+      font-weight: 600;
+      margin-left: 8%;
+      background-color: rgba(0, 0, 0, 0.083);
+    }
+    
+    .button-wrap {
+      position: relative;
+      margin-top: 10%;
+      right: 1.5%;
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+      height: 20%;
+    }
+
+}
