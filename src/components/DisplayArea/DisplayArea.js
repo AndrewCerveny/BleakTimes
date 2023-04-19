@@ -2,8 +2,9 @@ import React from "react";
 import ArticleCover from "../ArticleCover/ArticleCover";
 import './DisplayArea.css'
 import { Link } from "react-router-dom";
+import Searchbar from "../Searchbar/Searchbar";
 
-const DisplayArea = ({articles}) => {
+const DisplayArea = ({articles,titleFind}) => {
  const allArticles = articles.map((article) => 
 
 <section className=" article-wrap" key={article.id}>
@@ -18,6 +19,7 @@ const DisplayArea = ({articles}) => {
 
  return( 
  <section className='articles-displayed'>
+  <Searchbar titleFind={titleFind}/>
   {allArticles}
  </section>
  )
