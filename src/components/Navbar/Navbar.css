@@ -1,10 +1,21 @@
 .nav-area{
   display: flex;
-  border: 2px solid black;
   justify-content: center;
   height: 10%;
+  background-color: lightgray
+}
+.nav-l{
+  width: 45%;
+  text-decoration: none;
+  
 }
 .nav-wrapper{
   display: flex;
   justify-content: space-evenly;
+  font-size: large; 
+}
+.nav-wrapper > h1 {
+margin-left: -4rem;
+color:black;
+font-weight: 800; 
 }
