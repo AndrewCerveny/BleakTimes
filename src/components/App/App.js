@@ -13,7 +13,8 @@ class App extends Component{
     this.state= {
       articles:[],
       error:'',
-      selections:[]
+      selections:[],
+      searchedArticle:''
     }
   }
 
@@ -25,8 +26,10 @@ class App extends Component{
   }
   
   titleFilter = (searchedItem) => {
+    this.setState({selectedArticle:searchedItem})
+    
     if(searchedItem === ''){
-      return this.setState({selections:''})
+      return this.setState({selections:[]})
     }else{
       
       const comparedWord = searchedItem.toUpperCase()
@@ -39,20 +42,24 @@ class App extends Component{
       this.setState({selections:matchedSelections})
     }
     
-  }
+   }
   
-  render() {
- 
+   clearSelects = () => {
+    this.setState({selectedArticle: '', selections:[]})
+   }
+  
+    render() {
+      
 
     return(
       <main className="app">
         <Navbar/>
         <Switch>
-          {!this.state.selections.length && <Route exact path={'/'} render={() => <DisplayArea articles={this.state.articles} titleFind={this.titleFilter}/> }/>}
-          {this.state.selections.length > 0 && <Route exact path={'/'} render={() => <DisplayArea articles={this.state.selections} titleFind={this.titleFilter}/> }/>}
+          {!this.state.selections.length && <Route exact path={'/'} render={() => <DisplayArea articles={this.state.articles} titleFind={this.titleFilter} /> }/>}
+          {this.state.selections.length > 0 && <Route exact path={'/'} render={() => <DisplayArea articles={this.state.selections} titleFind={this.titleFilter} />}/>}
           <Route exact path={'/article/:id'} render={({match})=> {
           const matchedArticle = this.state.articles.find((article) => article.id === match.params.id)
-          return <DetailedArticle matchedArticle={matchedArticle}/>
+          return <DetailedArticle matchedArticle={matchedArticle} clear={this.clearSelects}/>
           }}/> 
           <Route path={'*'} render={() => {
             return <Error message={this.state.error}/>
