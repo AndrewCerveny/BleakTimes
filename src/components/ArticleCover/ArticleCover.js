@@ -7,7 +7,7 @@ const ArticleCover = ({title,id,created,picture}) => {
    const altText = picture[1].caption
   
   return(
-    <Link to={`/article/${id}`}>
+    <Link to={`/article/${id}`} className="link-c">
       <section className="cover-area">
         <div className="article-cont">
           <div className="image-cont">
@@ -15,7 +15,7 @@ const ArticleCover = ({title,id,created,picture}) => {
           </div>
           <article className="article-cov">
             <h2>{title}</h2>
-            <h2>Created:{created}</h2>
+            <h2 className='date-written'>Created: <span className="date">{created}</span></h2>
           </article>
         </div>
       </section>
