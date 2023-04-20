@@ -3,11 +3,11 @@ import Robot from '../../util/Images/robot.png'
 import { Link } from "react-router-dom";
 import './Error.css'
 
-const Error = (message) => {
+const Error = ({error}) => {
   let warning;
 
-  if(message.length){
-    warning = message 
+  if(error){
+    warning = error
   }else{
     warning = 'According to records ... Page Not Found' 
   }
@@ -17,9 +17,9 @@ const Error = (message) => {
       <img className="err-image" src={Robot} alt='confused Robot'/>
         <div className="err-message-wrap">
           <h2>{warning}</h2>
-          <div>
+          <div className="return-btn">
             <Link to='/'>
-              <button> HomePage </button>
+              <button className="err-btn"> HomePage </button>
             </Link>
           </div>
         </div>
