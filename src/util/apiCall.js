@@ -1,6 +1,7 @@
+
 const getArticles = () => {
  const url = 'https://api.nytimes.com/svc/topstories/v2/us.json?api-key='
- const apiKey ='IncPXxDhLTioCj842WteukrUvw5vCeap'
+ const apiKey = process.env.REACT_APP_API_KEY 
  
  return fetch(`${url}${apiKey}`)
   .then((res) => {
