@@ -22,7 +22,9 @@ class App extends Component{
   componentDidMount = () => {
     getArticles()
     .then((data) => this.setState({articles:cleanApi(data.results)}))
-    .catch((err)=> this.setState({error:err.message}))
+    .catch((err)=> {
+      err.message = '404 failed to retrieve information, Try Again Later!'
+    return  this.setState({error:err.message})})
   }
   
   titleFilter = (searchedItem) => {
@@ -36,7 +38,6 @@ class App extends Component{
      
       const comparableTitles = this.state.articles.map((news) => {
         news.titleAbr = news.title.substring(0,3).toUpperCase()
-        console.log('pants',news)
         return news
       })
       const matchedSelections = comparableTitles.filter((news) => news.titleAbr.includes(comparedWord))
@@ -50,14 +51,13 @@ class App extends Component{
    }
   
     render() {
-      
-
     return(
       <main className="app">
         <Navbar/>
         <Switch>
-          {!this.state.selections.length && <Route exact path={'/'} render={() => <DisplayArea articles={this.state.articles} titleFind={this.titleFilter} /> }/>}
-          {this.state.selections.length > 0 && <Route exact path={'/'} render={() => <DisplayArea articles={this.state.selections} titleFind={this.titleFilter} />}/>}
+          
+          {!this.state.selections.length && <Route exact path={'/'} render={() => <DisplayArea articles={this.state.articles} titleFind={this.titleFilter} error={this.state.error} /> }/>}
+          {this.state.selections.length > 0 && <Route exact path={'/'} render={() => <DisplayArea articles={this.state.selections} titleFind={this.titleFilter} error={this.state.error} />}/>}
           <Route exact path={'/article/:id'} render={({match})=> {
           const matchedArticle = this.state.articles.find((article) => article.id === match.params.id)
           return <DetailedArticle matchedArticle={matchedArticle} clear={this.clearSelects}/>

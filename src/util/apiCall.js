@@ -6,7 +6,7 @@ const getArticles = () => {
  return fetch(`${url}${apiKey}`)
   .then((res) => {
     if(!res.ok) {
-      throw new Error()
+      throw Error('404 failed to get collect information,please try again later!')
     }else{
       return res.json()
     }
