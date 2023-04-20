@@ -17,7 +17,7 @@ const Error = ({error}) => {
       <img className="err-image" src={Robot} alt='confused Robot'/>
         <div className="err-message-wrap">
           <h2>{warning}</h2>
-          <div className="return-btn">
+          <div className="return-wrap">
             <Link to='/'>
               <button className="err-btn"> HomePage </button>
             </Link>
