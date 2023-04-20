@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 import Searchbar from "../Searchbar/Searchbar";
 import Error from "../Error/Error";
 
-const DisplayArea = ({articles,titleFind,clear,error}) => {
-  console.log('socks',error);
- const allArticles = articles.map((article) => 
+const DisplayArea = ({articles,titleFind,clear,error,searchedNews}) => {
+  console.log('socks',searchedNews);
+ 
+  const allArticles = articles.map((article) => 
 
 <section className=" article-wrap" key={article.id}>
       <ArticleCover
@@ -22,7 +23,7 @@ const DisplayArea = ({articles,titleFind,clear,error}) => {
  return( 
  <section className='articles-displayed'>
   <Searchbar titleFind={titleFind} clear={clear}/>
-  {error? <Error error={error}/> : null }
+  {error ? <Error error={error}/> : null }
   {allArticles}
  </section>
  )
