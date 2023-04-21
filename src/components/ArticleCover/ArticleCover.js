@@ -1,6 +1,7 @@
 import React from "react";
 import './ArticleCover.css'
 import { Link } from "react-router-dom";
+import  PropTypes  from "prop-types";
 
 const ArticleCover = ({title,id,created,picture}) => {
   const image = picture[1].url
@@ -24,3 +25,10 @@ const ArticleCover = ({title,id,created,picture}) => {
   )
 }
 export default ArticleCover; 
+
+ArticleCover.propTypes = {
+  title:PropTypes.string,
+  id:PropTypes.string,
+  created:PropTypes.string,
+  picture:PropTypes.array, 
+}

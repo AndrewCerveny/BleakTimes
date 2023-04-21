@@ -2,6 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './DetailedArticle.css'
+import  PropTypes  from "prop-types";
 
 const DetailedArticle = ({matchedArticle, clear}) => {
   if(matchedArticle){
@@ -33,3 +34,8 @@ const DetailedArticle = ({matchedArticle, clear}) => {
   }
 }
 export default DetailedArticle
+
+DetailedArticle.propTypes = {
+  matchedArticle:PropTypes.object.isRequired,
+  clear:PropTypes.func.isRequired,
+}
