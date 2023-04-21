@@ -1,7 +1,6 @@
 import React from "react";
 import ArticleCover from "../ArticleCover/ArticleCover";
 import './DisplayArea.css'
-import { Link } from "react-router-dom";
 import Searchbar from "../Searchbar/Searchbar";
 import Error from "../Error/Error";
 import  PropTypes  from "prop-types";
@@ -11,10 +10,11 @@ const DisplayArea = ({articles,titleFind,error}) => {
  
   const allArticles = articles.map((article,index) => 
 
-<section className=" article-wrap" key={article.id}>
+<section className=" article-wrap">
       <ArticleCover
         title={article.title}
         id={article.id}
+        key={index}
         created={article.createdDate}
         picture={article.multimedia}
       />
