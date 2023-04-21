@@ -13,7 +13,6 @@ The app is a news aggregator that displays the current top news in the US. Users
 Include logo/demo screenshot etc.
 
 ## Tech/framework used
-Ex. -
 <div>
   <img src="https://img.shields.io/badge/-react-333333?logo=react&style=for-the-badge" width="100" height="30"/>
   <img src="https://img.shields.io/badge/-react%20router-f44250?logo=react%20router&logoColor=white&style=for-the-badge" width="100" height="30"/>
