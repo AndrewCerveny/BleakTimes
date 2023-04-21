@@ -32,4 +32,4 @@ export default Error;
 
 Error.propTypes = {
   error:PropTypes.string.isRequired,
-}
+};
