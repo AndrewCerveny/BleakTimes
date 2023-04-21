@@ -4,9 +4,10 @@ import './DisplayArea.css'
 import { Link } from "react-router-dom";
 import Searchbar from "../Searchbar/Searchbar";
 import Error from "../Error/Error";
+import  PropTypes  from "prop-types";
 
-const DisplayArea = ({articles,titleFind,clear,error,searchedNews}) => {
-  console.log('socks',searchedNews);
+const DisplayArea = ({articles,titleFind,error}) => {
+  
  
   const allArticles = articles.map((article) => 
 
@@ -14,6 +15,7 @@ const DisplayArea = ({articles,titleFind,clear,error,searchedNews}) => {
       <ArticleCover
         title={article.title}
         id={article.id}
+        key={article.id}
         created={article.createdDate}
         picture={article.multimedia}
       />
@@ -22,7 +24,7 @@ const DisplayArea = ({articles,titleFind,clear,error,searchedNews}) => {
 
  return( 
  <section className='articles-displayed'>
-  <Searchbar titleFind={titleFind} clear={clear}/>
+  <Searchbar titleFind={titleFind} />
   {error ? <Error error={error}/> : null }
   {allArticles}
  </section>
@@ -30,3 +32,9 @@ const DisplayArea = ({articles,titleFind,clear,error,searchedNews}) => {
 }
 
 export default DisplayArea; 
+
+DisplayArea.propTypes = {
+  articles:PropTypes.array.isRequired,
+  titleFind:PropTypes.func.isRequired,
+  error:PropTypes.string.isRequired,
+}

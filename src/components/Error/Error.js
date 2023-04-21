@@ -2,6 +2,7 @@ import React from "react";
 import Robot from '../../util/Images/robot.png'
 import { Link } from "react-router-dom";
 import './Error.css'
+import  PropTypes  from "prop-types";
 
 const Error = ({error}) => {
   let warning;
@@ -28,3 +29,7 @@ const Error = ({error}) => {
 }
 
 export default Error; 
+
+Error.propTypes = {
+  error:PropTypes.string.isRequired,
+}
