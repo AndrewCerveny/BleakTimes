@@ -10,7 +10,7 @@ Assaignment: TakeHome Challenge
 The app is a news aggregator that displays the current top news in the US. Users can click on a news story to read more and are redirected to the New York Times website. The app provides a convenient way for users to stay up-to-date with the latest news and easily access in-depth coverage from a reputable source.
  
 ## Screenshots / deployment link if applicable
-Include logo/demo screenshot etc.
+![ BleakTimesApp](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjFkNjdkNTQzNDI0ZDc4NTQ0ODY5ZDc0ZDNkZWVkODk2YmU3YjYzOSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/K3Pu2qydFi6GcyTq9N/giphy.gif)
 
 ## Tech/framework used
 <div>
