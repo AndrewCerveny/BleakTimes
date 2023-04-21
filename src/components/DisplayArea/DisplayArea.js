@@ -9,13 +9,12 @@ import  PropTypes  from "prop-types";
 const DisplayArea = ({articles,titleFind,error}) => {
   
  
-  const allArticles = articles.map((article) => 
+  const allArticles = articles.map((article,index) => 
 
 <section className=" article-wrap" key={article.id}>
       <ArticleCover
         title={article.title}
         id={article.id}
-        key={article.id}
         created={article.createdDate}
         picture={article.multimedia}
       />

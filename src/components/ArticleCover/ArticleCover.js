@@ -25,9 +25,10 @@ const ArticleCover = ({title,id,created,picture}) => {
   )
 }
 export default ArticleCover; 
+
 ArticleCover.propTypes = {
-  title:PropTypes.string.isRequired,
-  id:PropTypes.string.isRequired,
-  created:PropTypes.string.isRequired,
-  picture:PropTypes.array.isRequired, 
+  title:PropTypes.string,
+  id:PropTypes.string,
+  created:PropTypes.string,
+  picture:PropTypes.array, 
 }

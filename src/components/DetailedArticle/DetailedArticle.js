@@ -37,5 +37,5 @@ export default DetailedArticle
 
 DetailedArticle.propTypes = {
   matchedArticle:PropTypes.object.isRequired,
-  clear:PropTypes.function.isRequired,
+  clear:PropTypes.func.isRequired,
 }
